@@ -1,21 +1,15 @@
-# Set Methods
+print(range(100))
+print(range(0, 100))
 
-my_set = {1, 2, 3, 4, 5}
-your_set = {4, 5, 6, 7, 8, 9, 10}
+for num in range(0, 10): # use _ if you want to state that you are not using the variable
+  print(num)
 
-# print(my_set.difference(your_set))
-# my_set.discard(5)
-# print(my_set)
+for _ in range(0, 10, 2):
+  print(_)
 
-# print(my_set.difference_update(your_set))
-# print(my_set)
+for _ in range(10, 0, -1):
+  print(_)
 
-# print(my_set.intersection(your_set)) # can also to & like in join below
+for _ in range(2):
+  print(list(range(10)))
 
-# print(my_set.isdisjoint(your_set))
-
-# print(my_set.issubset(your_set))
-
-# print(my_set.issuperset(your_set))
-
-# print(my_set | your_set) # substitues for .join
