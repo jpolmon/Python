@@ -1,15 +1,17 @@
-print(range(100))
-print(range(0, 100))
+# Exercise: Check for duplicates in list:
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+used_characters = {}
+duplicates = []
 
-for num in range(0, 10): # use _ if you want to state that you are not using the variable
-  print(num)
+for letter in some_list:
+  if some_list.count(letter) > 1:
+    if letter not in duplicates:
+      duplicates.append(letter)
 
-for _ in range(0, 10, 2):
-  print(_)
+for letter in some_list:
+  if not letter in used_characters.keys():
+    used_characters[letter] = 1
+  elif used_characters[letter] == 1:
+    duplicates.append(letter)
 
-for _ in range(10, 0, -1):
-  print(_)
-
-for _ in range(2):
-  print(list(range(10)))
-
+print(duplicates)
