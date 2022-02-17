@@ -1,18 +1,25 @@
-class PlayerCharacter:
-  #Class Object Attribute
-  membership = True
-  
-  def __init__(self, name, age):
-    self.name = name
-    self.age = age
+# MRO - Method Resolution Order
 
-  def run(self):
-    print('run')
+class A:
+  num = 10
 
-player1 = PlayerCharacter('JP', 28)
+class B(A):
+  pass
 
-print(player1)
-print(player1.name)
-print(player1.age)
+class C(A):
+  num = 1
 
-player1.run()
+class D(B, C):
+  pass
+
+print(D.mro()) # Shows you the resolution order for an object
+print(D.num)
+
+class X: pass
+class Y: pass
+class Z: pass
+class A(X, Y): pass
+class B(Y, Z): pass
+class M(B, A, Z): pass
+
+print(M.mro()) # MRO uses depth-first search
