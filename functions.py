@@ -157,3 +157,4 @@ def outer():
   print('outer:', x)
 
 outer()
+

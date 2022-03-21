@@ -1,25 +1,11 @@
-# MRO - Method Resolution Order
+# Comprehension exercise
 
-class A:
-  num = 10
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 
-class B(A):
-  pass
+duplicates = list(set([letter for letter in some_list if some_list.count(letter) > 1]))
 
-class C(A):
-  num = 1
+print(duplicates)
 
-class D(B, C):
-  pass
 
-print(D.mro()) # Shows you the resolution order for an object
-print(D.num)
 
-class X: pass
-class Y: pass
-class Z: pass
-class A(X, Y): pass
-class B(Y, Z): pass
-class M(B, A, Z): pass
 
-print(M.mro()) # MRO uses depth-first search
