@@ -1,5 +1,5 @@
-import random
+import sys
 
-print(random)
+sys.argv
   
   
